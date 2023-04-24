@@ -1,0 +1,11 @@
+.red-button {
+  background-color: rgba(221, 15, 15, 0.795);
+  display: inline-block;
+  color: azure;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
