@@ -18,33 +18,29 @@
             referrerpolicy="no-referrer"
         />
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ asset('css/f1.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/f1.css') }}"> />
     </head>
     <body>
         <div class="container my-4">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <?php
-                    // Crear una conexión a la base de datos
-                    $db = new PDO('sqlite:C:\Users\erick\Documentos\proyectoFrame\database\database.sqlite');
-
-                    // Ejecutar una consulta SQL
-                    $resultado = $db->query('SELECT * FROM usuarios');
-
-                    // Mostrar los resultados en una tabla HTML
-                    echo '<table>';
-                    foreach ($resultado as $fila) {
-                        echo '<tr>';
-                        echo '<td>' . $fila['nombre'] . '</td>';
-                        echo '<td>' . $fila['nombre_de_usuario'] . '</td>';
-                        echo '<td>' . $fila['cargo'] . '</td>';
-                        echo '</tr>';
-                    }
-                    echo '</table>';
-
-                    // Cerrar la conexión a la base de datos
-                    $db = null;
-                    ?>
+                    <table id="datatable_users" class="table table-striped">
+                        <caption>
+                            DataTable.js Demo
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="centered">#</th>
+                                <th class="centered">Name</th>
+                                <th class="centered">Email</th>
+                                <th class="centered">City</th>
+                                <th class="centered">Company</th>
+                                <th class="centered">Status</th>
+                                <th class="centered">Options</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody_users"></tbody>
+                    </table>
                 </div>
             </div>
         </div>
